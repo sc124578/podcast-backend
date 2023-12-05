@@ -7,7 +7,7 @@ const addGame = async (req, res) => {
   try {
     const { name, platform, year } = req.body;
 
-    // Assuming you have a function like addGameToDatabase that interacts with your PostgreSQL database
+    
     const newGame = await addGameToDatabase(name, platform, year);
 
     const transporter = nodeMailer.createTransport({
@@ -34,7 +34,7 @@ const addGame = async (req, res) => {
   }
 };
 
-// In your controller file
+
 const getGames = async (req, res) => {
   try {
     // Assuming you have a 'games' table in your database
@@ -72,7 +72,7 @@ const deleteGame = async (req, res) => {
 };
 
 
-// Placeholder authentication function
+
 const authenticateUser = (userName, password) => {
   // Placeholder logic - replace with actual authentication mechanism
   const validUsernames = process.env.DELETE_USERNAME.split(',');
